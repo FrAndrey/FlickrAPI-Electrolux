@@ -7,12 +7,20 @@
 //
 
 import UIKit
+import PureLayout
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
 
+    var viewModel:ViewModel?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        viewModel = ViewModel()
+
+        
+        
     }
 
 

@@ -14,6 +14,7 @@
 		55F339D825B96CDA00D0AD16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55F339D725B96CDA00D0AD16 /* Assets.xcassets */; };
 		55F339DB25B96CDA00D0AD16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55F339D925B96CDA00D0AD16 /* LaunchScreen.storyboard */; };
 		55F339E625B970BD00D0AD16 /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F339E525B970BD00D0AD16 /* Photos.swift */; };
+		55F339E825B974E100D0AD16 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F339E725B974E100D0AD16 /* Manager.swift */; };
 		824D2421DBFA2F5376369698 /* Pods_FlickrAPI_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00CAE9CF07AB3A66D9E50F0D /* Pods_FlickrAPI_demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		55F339DA25B96CDA00D0AD16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55F339DC25B96CDA00D0AD16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55F339E525B970BD00D0AD16 /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
+		55F339E725B974E100D0AD16 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 		A8B3970BF83BA2D168E9D2D4 /* Pods-FlickrAPI-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickrAPI-demo.release.xcconfig"; path = "Target Support Files/Pods-FlickrAPI-demo/Pods-FlickrAPI-demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				55F339E525B970BD00D0AD16 /* Photos.swift */,
+				55F339E725B974E100D0AD16 /* Manager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				55F339D325B96CD700D0AD16 /* ViewController.swift in Sources */,
 				55F339CF25B96CD700D0AD16 /* AppDelegate.swift in Sources */,
 				55F339D125B96CD700D0AD16 /* SceneDelegate.swift in Sources */,
+				55F339E825B974E100D0AD16 /* Manager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -30,34 +30,26 @@ class Network {
                 print("Error with data request \(error)")
                 return
             }
-            
             //ensure response is successfull
             guard let httpResponse = response as? HTTPURLResponse,
                 (200...299).contains(httpResponse.statusCode) else {
                     print("Error with the response, status code \(response)")
                     return
             }
-            
             //decode the JSON response
             var result: Response?
             do {
-                
                 result = try JSONDecoder().decode(Response.self, from: data!)
             }
             catch {
                 print("error \(error)")
-                
             }
             guard let jsonResponse = result
                 else {
                     return
             }
             print(jsonResponse)
-            
         })
         task.resume()
     }
-    
-    
-    
 }

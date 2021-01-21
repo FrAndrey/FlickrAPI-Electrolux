@@ -1,0 +1,36 @@
+
+FlickrAPI-demo/Podfile.lock
+FlickrAPI-demo/Pods/Target Support Files/PureLayout/PureLayout.release.xcconfig
+FlickrAPI-demo/Pods/Target Support Files/PureLayout/PureLayout.modulemap
+FlickrAPI-demo/Pods/Target Support Files/PureLayout/PureLayout.debug.xcconfig
+FlickrAPI-demo/Pods/Target Support Files/PureLayout/PureLayout-umbrella.h
+FlickrAPI-demo/Pods/Target Support Files/PureLayout/PureLayout-prefix.pch
+FlickrAPI-demo/Pods/Target Support Files/PureLayout/PureLayout-Info.plist
+FlickrAPI-demo/Pods/Target Support Files/PureLayout/PureLayout-dummy.m
+FlickrAPI-demo/Pods/Target Support Files/Pods-FlickrAPI-demo/Pods-FlickrAPI-demo.release.xcconfig
+FlickrAPI-demo/Pods/Target Support Files/Pods-FlickrAPI-demo/Pods-FlickrAPI-demo.modulemap
+FlickrAPI-demo/Pods/Target Support Files/Pods-FlickrAPI-demo/Pods-FlickrAPI-demo.debug.xcconfig
+FlickrAPI-demo/Pods/Target Support Files/Pods-FlickrAPI-demo/Pods-FlickrAPI-demo-umbrella.h
+FlickrAPI-demo/Pods/Target Support Files/Pods-FlickrAPI-demo/Pods-FlickrAPI-demo-Info.plist
+FlickrAPI-demo/Pods/Target Support Files/Pods-FlickrAPI-demo/Pods-FlickrAPI-demo-frameworks.sh
+FlickrAPI-demo/Pods/Target Support Files/Pods-FlickrAPI-demo/Pods-FlickrAPI-demo-frameworks-Release-output-files.xcfilelist
+FlickrAPI-demo/Pods/Target Support Files/Pods-FlickrAPI-demo/Pods-FlickrAPI-demo-frameworks-Release-input-files.xcfilelist
+FlickrAPI-demo/Pods/Target Support Files/Pods-FlickrAPI-demo/Pods-FlickrAPI-demo-frameworks-Debug-output-files.xcfilelist
+FlickrAPI-demo/Pods/Target Support Files/Pods-FlickrAPI-demo/Pods-FlickrAPI-demo-frameworks-Debug-input-files.xcfilelist
+FlickrAPI-demo/Pods/Target Support Files/Pods-FlickrAPI-demo/Pods-FlickrAPI-demo-dummy.m
+FlickrAPI-demo/Pods/Target Support Files/Pods-FlickrAPI-demo/Pods-FlickrAPI-demo-acknowledgements.plist
+FlickrAPI-demo/Pods/Target Support Files/Pods-FlickrAPI-demo/Pods-FlickrAPI-demo-acknowledgements.markdown
+FlickrAPI-demo/Pods/PureLayout/README.md
+FlickrAPI-demo/Pods/PureLayout/PureLayout/PureLayout/PureLayoutDefines.h
+FlickrAPI-demo/Pods/PureLayout/PureLayout/PureLayout/PureLayout.h
+FlickrAPI-demo/Pods/PureLayout/PureLayout/PureLayout/PureLayout+Internal.h
+FlickrAPI-demo/Pods/PureLayout/PureLayout/PureLayout/NSLayoutConstraint+PureLayout.m
+FlickrAPI-demo/Pods/PureLayout/PureLayout/PureLayout/NSLayoutConstraint+PureLayout.h
+FlickrAPI-demo/Pods/PureLayout/PureLayout/PureLayout/NSArray+PureLayout.m
+FlickrAPI-demo/Pods/PureLayout/PureLayout/PureLayout/NSArray+PureLayout.h
+FlickrAPI-demo/Pods/PureLayout/PureLayout/PureLayout/ALView+PureLayout.m
+FlickrAPI-demo/Pods/PureLayout/PureLayout/PureLayout/ALView+PureLayout.h
+FlickrAPI-demo/Pods/PureLayout/LICENSE
+FlickrAPI-demo/Pods/Pods.xcodeproj/xcuserdata/andrey.xcuserdatad/xcschemes/xcschememanagement.plist
+FlickrAPI-demo/Pods/Pods.xcodeproj/xcuserdata/andrey.xcuserdatad/xcschemes/PureLayout.xcscheme
+FlickrAPI-demo/Pods/Pods.xcodeproj/xcuserdata/andrey.xcuserdatad/xcschemes/Pods-FlickrAPI-demo.xcscheme

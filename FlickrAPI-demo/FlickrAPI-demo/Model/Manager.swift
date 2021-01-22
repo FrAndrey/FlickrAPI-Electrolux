@@ -18,7 +18,7 @@ class Manager {
     
     
     // make an api request
-    func FetchData() {
+    func FetchData(completionHandler: @escaping ([Photo]) -> Void) {
         
         var apiUrl:String = "https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=\(apiKey)&tags=\(searchTag)&format=\(receivedFormat)"
         let url = URL(string: apiUrl)!
@@ -37,19 +37,11 @@ class Manager {
                     return
             }
             //decode the JSON response
-            var result: Response?
-            do {
-                result = try JSONDecoder().decode(Response.self, from: data!)
-            }
-            catch {
-                print("error \(error)")
-            }
-            guard let jsonResponse = result
-                else {
-                    return
-            }
-            print(jsonResponse)
-        })
+                if let data = data,
+                let photoSummary = try? JSONDecoder().decode(Response.self, from: data) {
+                    completionHandler(photoSummary.photos.photo )
+              }
+            })
         task.resume()
     }
 }

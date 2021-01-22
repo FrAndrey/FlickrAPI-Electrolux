@@ -12,21 +12,25 @@ import PureLayout
 class MainViewController: UIViewController {
 
     var viewModel:ViewModel?
-    var photos:Response?
+    var photoCollection:[Photo]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .blue
         viewModel = ViewModel()
-        Manager().FetchData()
+        Manager().FetchData(completionHandler: { (photos) in
+            self.photoCollection = photos
+            print(self.photoCollection)
+            DispatchQueue.main.async{
+                self.photoCollection = photos
+                
+                
+                
+                }
+        })//end of closure
         
-        
-        
-        
-        
-        
-        
+    }//end of viewDidLoad
         
         
         
@@ -37,7 +41,7 @@ class MainViewController: UIViewController {
         
     }
 
-    
+
     
     
 //      lazy var upperView: UIView = {
@@ -72,5 +76,5 @@ class MainViewController: UIViewController {
 //      }
     
 
-}
+
 

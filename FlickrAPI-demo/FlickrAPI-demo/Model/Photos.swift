@@ -33,6 +33,13 @@ struct Response: Decodable {
         let secret: String
         let server: String
         
+        init(id: String, secret: String, server: String) {
+            self.id = id
+            self.secret = secret
+            self.server = server
+        }
+    
+        
         enum CodingKeys: String, CodingKey {
             case id = "id"
             case secret = "secret"

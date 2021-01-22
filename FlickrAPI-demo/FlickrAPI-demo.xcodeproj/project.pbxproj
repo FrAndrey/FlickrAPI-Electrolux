@@ -15,6 +15,10 @@
 		55F339E625B970BD00D0AD16 /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F339E525B970BD00D0AD16 /* Photos.swift */; };
 		55F339E825B974E100D0AD16 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F339E725B974E100D0AD16 /* Manager.swift */; };
 		55F339EA25B9BB0700D0AD16 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F339E925B9BB0700D0AD16 /* ViewModel.swift */; };
+		55F339ED25BA6E5100D0AD16 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F339EC25BA6E5100D0AD16 /* MainNavigationController.swift */; };
+		55F339EF25BA6EE400D0AD16 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F339EE25BA6EE400D0AD16 /* TabBarController.swift */; };
+		55F339F125BA702400D0AD16 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F339F025BA702400D0AD16 /* DetailViewController.swift */; };
+		55F339F325BA736000D0AD16 /* BioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F339F225BA736000D0AD16 /* BioViewController.swift */; };
 		824D2421DBFA2F5376369698 /* Pods_FlickrAPI_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00CAE9CF07AB3A66D9E50F0D /* Pods_FlickrAPI_demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +35,10 @@
 		55F339E525B970BD00D0AD16 /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
 		55F339E725B974E100D0AD16 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 		55F339E925B9BB0700D0AD16 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		55F339EC25BA6E5100D0AD16 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		55F339EE25BA6EE400D0AD16 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		55F339F025BA702400D0AD16 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		55F339F225BA736000D0AD16 /* BioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioViewController.swift; sourceTree = "<group>"; };
 		A8B3970BF83BA2D168E9D2D4 /* Pods-FlickrAPI-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickrAPI-demo.release.xcconfig"; path = "Target Support Files/Pods-FlickrAPI-demo/Pods-FlickrAPI-demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,6 +109,10 @@
 			isa = PBXGroup;
 			children = (
 				55F339D225B96CD700D0AD16 /* MainViewController.swift */,
+				55F339EC25BA6E5100D0AD16 /* MainNavigationController.swift */,
+				55F339EE25BA6EE400D0AD16 /* TabBarController.swift */,
+				55F339F025BA702400D0AD16 /* DetailViewController.swift */,
+				55F339F225BA736000D0AD16 /* BioViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -243,12 +255,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55F339F125BA702400D0AD16 /* DetailViewController.swift in Sources */,
 				55F339E625B970BD00D0AD16 /* Photos.swift in Sources */,
+				55F339EF25BA6EE400D0AD16 /* TabBarController.swift in Sources */,
 				55F339D325B96CD700D0AD16 /* MainViewController.swift in Sources */,
 				55F339CF25B96CD700D0AD16 /* AppDelegate.swift in Sources */,
 				55F339D125B96CD700D0AD16 /* SceneDelegate.swift in Sources */,
 				55F339EA25B9BB0700D0AD16 /* ViewModel.swift in Sources */,
+				55F339ED25BA6E5100D0AD16 /* MainNavigationController.swift in Sources */,
 				55F339E825B974E100D0AD16 /* Manager.swift in Sources */,
+				55F339F325BA736000D0AD16 /* BioViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

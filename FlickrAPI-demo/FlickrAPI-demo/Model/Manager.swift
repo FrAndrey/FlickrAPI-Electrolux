@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Network {
+class Manager {
     
     //key parameters for the api request
     let apiKey:String = "425afaf8cea642ddd8b331034da5489f"

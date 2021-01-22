@@ -19,9 +19,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
+        let tabBarController = TabBarController()
+        let mainNavigationController = MainNavigationController()
+        let mainViewController = MainViewController()
+        let bioViewController = BioViewController()
+        let detailViewController = DetailViewController()
+        
+        mainNavigationController.title = "Photo Search"
+        bioViewController.title = "Bio"
+        mainViewController.title = "Search Screen"
+
+        
+        
+        mainNavigationController.setViewControllers([mainViewController], animated: false)
+        tabBarController.viewControllers = [mainNavigationController,bioViewController]
+        
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = MainViewController()
+        window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
         
     }

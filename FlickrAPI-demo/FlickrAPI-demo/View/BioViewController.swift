@@ -11,7 +11,7 @@ import PureLayout
 
 // 90% of this code has to be in view, and handed by ViewModel.
 // massive view controller..
-class BioViewController: UIViewController {
+class BioViewController: UIViewController, UIScrollViewDelegate {
     
     var upperView:UIView!
     var middleView:UIView!
@@ -23,6 +23,7 @@ class BioViewController: UIViewController {
     var lastNameText:UILabel!
     var mainTextLabel:UILabel!
     
+    //avatar with PureLayout
     lazy var avatar: UIImageView = {
         let imageView = UIImageView(image: UIImage(named: "me.jpeg"))
         imageView.autoSetDimensions(to: CGSize(width: 128.0, height: 128.0))
@@ -58,7 +59,7 @@ class BioViewController: UIViewController {
         
         
         mainTextLabel = UILabel()
-       mainTextLabel.text = "Зима!.. Крестьянин, торжествуя, На дровнях обновляет путь; Его лошадка, снег почуя,Плетется рысью как-нибудь; Бразды пушистые взрывая, Летит кибитка удалая; Ямщик сидит на облучке  В тулупе, в красном кушаке.  Вот бегает дворовый мальчик,  В салазки жучку посадив,  Себя в коня преобразив;  Шалун уж заморозил пальчик:  Ему и больно и смешно, А мать грозит ему в окно…"
+        mainTextLabel.text = "Зима!.. Крестьянин, торжествуя, На дровнях обновляет путь; Его лошадка, снег почуя,Плетется рысью как-нибудь; Бразды пушистые взрывая, Летит кибитка удалая; Ямщик сидит на облучке  В тулупе, в красном кушаке.  Вот бегает дворовый мальчик,  В салазки жучку посадив,  Себя в коня преобразив;  Шалун уж заморозил пальчик:  Ему и больно и смешно, А мать грозит ему в окно… "
         mainTextLabel.font = UIFont(name: mainTextLabel.font.fontName, size: 23)
         mainTextLabel.textAlignment = .center
         mainTextLabel.numberOfLines = 0
@@ -72,8 +73,6 @@ class BioViewController: UIViewController {
         mainTextLabel.bottomAnchor.constraint(equalTo: middleView.bottomAnchor).isActive = true
         mainTextLabel.widthAnchor.constraint(equalTo: middleView.widthAnchor, multiplier: 0.9).isActive = true
         mainTextLabel.heightAnchor.constraint(equalTo: middleView.heightAnchor, multiplier: 1.0).isActive = true
-        
-        
         
         bioLabel = UILabel()
         bioLabel.text = "BIO"
@@ -112,10 +111,6 @@ class BioViewController: UIViewController {
         lastNameText.bottomAnchor.constraint(equalTo: middleView.bottomAnchor).isActive = true
         lastNameText.widthAnchor.constraint(equalTo: middleView.widthAnchor, multiplier: 0.9).isActive = true
         lastNameText.heightAnchor.constraint(equalTo: middleView.heightAnchor, multiplier: 1.80).isActive = true
-        
-        
-        
-        
         
         
         lastNameLabel = UILabel()
@@ -169,9 +164,6 @@ class BioViewController: UIViewController {
         titleLabel.heightAnchor.constraint(equalTo: upperView.heightAnchor, multiplier: 0.5).isActive = true
         
         
-        
     }
-    
-    
     
 }

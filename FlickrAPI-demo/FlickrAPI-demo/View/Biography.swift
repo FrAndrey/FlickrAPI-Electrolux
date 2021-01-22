@@ -8,7 +8,7 @@
 
 import UIKit
 
-//view for Biography tab
+//view for Bio View
 class Biography {
     
     

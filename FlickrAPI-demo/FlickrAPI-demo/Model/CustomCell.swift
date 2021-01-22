@@ -13,17 +13,6 @@ class CustomCell: UICollectionViewCell {
     var imageView:UIImageView!
     var image:UIImage!
     
-    var imageOffset: CGPoint!
-    
-    func setImageOffset(imageOffset: CGPoint) {
-        
-        self.imageOffset = imageOffset
-        
-        let frame:CGRect = imageView.bounds
-        let offsetFrame:CGRect = frame.offsetBy(dx: self.imageOffset.x, dy: self.imageOffset.y)
-        imageView.frame = offsetFrame
-    }
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()

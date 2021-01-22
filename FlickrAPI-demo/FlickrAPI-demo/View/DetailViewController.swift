@@ -15,7 +15,7 @@ class DetailViewController: UIViewController {
     lazy var image: UIImageView = {
         let imageView = UIImageView(image: passedImage)
         imageView.contentMode = UIView.ContentMode.scaleAspectFit
-        //imageView.autoSetDimensions(to: CGSize(width: view.frame.width, height: view.frame.height))xw
+        //imageView.autoSetDimensions(to: CGSize(width: view.frame.width, height: view.frame.height))
           imageView.clipsToBounds = true
           return imageView
       }()
@@ -35,7 +35,6 @@ class DetailViewController: UIViewController {
         addSubviews()
         setupConstraints()
         view.backgroundColor = .white
-        
         
         
     }

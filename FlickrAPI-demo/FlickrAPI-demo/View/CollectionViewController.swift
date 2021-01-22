@@ -16,72 +16,32 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
     let customCellIdentifier = "customCellIdentifier"
     var selectedImage:UIImage!
     
-    
-    
-    lazy var image: UIImageView = {
-        let imageView = UIImageView(image: UIImage(named: ""))
-        imageView.autoSetDimensions(to: CGSize(width: 150.0, height: 150.0))
-        imageView.layer.borderWidth = 3.0
-        imageView.layer.borderColor = UIColor.lightGray.cgColor
-        imageView.layer.cornerRadius = 64.0
-        imageView.clipsToBounds = true
-        return imageView
-    }()
-    
-    lazy var upperView: UIView = {
-        let view = UIView()
-        view.autoSetDimension(.height, toSize: 150)
-        view.backgroundColor = .gray
-        return view
-    }()
-    
-    func addSubviews() {
-        //self.view.addSubview(image)
-        // self.view.addSubview(upperView)
-    }
-    
-    func setupConstraints() {
-        image.autoAlignAxis(toSuperviewAxis: .vertical)
-        image.autoPinEdge(toSuperviewEdge: .top, withInset: 150.0)
-        //        upperView.autoPinEdge(toSuperviewEdge: .left)
-        //        upperView.autoPinEdge(toSuperviewEdge: .right)
-        //        upperView.autoPinEdgesToSuperviewEdges(with: .zero, excludingEdge: .bottom)
-    }
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         viewModel = ViewModel()
-        //        addSubviews()
-        //        setupConstraints()
         
-        collectionView?.backgroundColor = .blue
+        collectionView?.backgroundColor = .white
         collectionView?.register(CustomCell.self, forCellWithReuseIdentifier: customCellIdentifier)
         
         Manager().FetchData(completionHandler: { (photos) in
-            
             self.photoUrlCollection = photos
             print(self.photoUrlCollection)
             
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
             }
-            
         })//end of closure
-        
-        
     }//end of viewDidLoad
     
     //size of the cell
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 150, height: 150)
+        return CGSize(width: 165, height: 165)
     }
     
     //amount of items
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.photoUrlCollection?.count ?? 0
-        
     }
     
     //on selection
@@ -95,7 +55,7 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
         selectedImage = cell.imageView.image
         detailViewController.passedImage = selectedImage
         
-        //navigate to detail info
+        //navigate to detail controller
         self.navigationController?.pushViewController(detailViewController, animated: false)
     }
     
@@ -116,10 +76,8 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
                     customCell.imageView.image  = UIImage(data:fetchedImage as Data)
                 }
             }//end of if statement
-            
         }// end of closure
         return customCell
-        
     }
     
 }

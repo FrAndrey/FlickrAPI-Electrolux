@@ -15,6 +15,11 @@ class TabBarController: UITabBarController {
 
         view.backgroundColor = .orange
         
+        // make the font of tab bar larger
+            let appearance = UITabBarItem.appearance()
+            let attributes: [NSAttributedString.Key: AnyObject] = [NSAttributedString.Key(rawValue: NSAttributedString.Key.font.rawValue):UIFont(name: "Cochin", size: 29)!, NSAttributedString.Key(rawValue: NSAttributedString.Key.foregroundColor.rawValue): UIColor.black]
+            appearance.setTitleTextAttributes(attributes, for: .normal)
+        
         
     }
 

@@ -22,14 +22,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let bioViewController = BioViewController()
         let detailViewController = DetailViewController()
         
+    
         //layout for UICollectionView
         let flowLayout = UICollectionViewFlowLayout()
+        flowLayout.sectionInset = UIEdgeInsets(top: 20, left: 17, bottom: 10, right: 17)
         let collectionViewController = CollectionViewController(collectionViewLayout: flowLayout)
         
         //set appropriate names
         mainNavigationController.title = "Photo Search"
         bioViewController.title = "Bio"
-        collectionViewController.title = "Search Screen"
+        collectionViewController.title = "Electrolux on Flickr"
 
         
         //navigation controller contains 1 controller - mainView

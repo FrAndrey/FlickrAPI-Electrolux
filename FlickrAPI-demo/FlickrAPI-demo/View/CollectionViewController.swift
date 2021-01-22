@@ -14,6 +14,7 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
     var viewModel:ViewModel?
     var photoUrlCollection:[String]?
     let customCellIdentifier = "customCellIdentifier"
+    var selectedImage:UIImage!
     
     
     
@@ -86,9 +87,16 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
     //on selection
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         //get the cell that user've clicked
-        let cell = collectionView.cellForItem(at: indexPath)
+        let cell = collectionView.cellForItem(at: indexPath) as! CustomCell
         //open detailsViewController to present bigger picture
-        self.navigationController?.pushViewController(DetailViewController(), animated: false)
+        let detailViewController = DetailViewController()
+        
+        //pass image to use in new VC
+        selectedImage = cell.imageView.image
+        detailViewController.passedImage = selectedImage
+        
+        //navigate to detail info
+        self.navigationController?.pushViewController(detailViewController, animated: false)
     }
     
     //custom cell registration/way it displayed/showed the photos

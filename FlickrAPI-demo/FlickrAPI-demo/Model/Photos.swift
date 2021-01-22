@@ -38,8 +38,7 @@ struct Response: Decodable {
             self.secret = secret
             self.server = server
         }
-    
-        
+
         enum CodingKeys: String, CodingKey {
             case id = "id"
             case secret = "secret"

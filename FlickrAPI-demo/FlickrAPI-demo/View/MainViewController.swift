@@ -12,7 +12,7 @@ import PureLayout
 class MainViewController: UIViewController {
 
     var viewModel:ViewModel?
-    var photoCollection:[Photo]?
+    var photoUrlCollection:[String]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,15 +20,19 @@ class MainViewController: UIViewController {
         view.backgroundColor = .blue
         viewModel = ViewModel()
         Manager().FetchData(completionHandler: { (photos) in
-            self.photoCollection = photos
-            print(self.photoCollection)
+            self.photoUrlCollection = photos
+            print(self.photoUrlCollection)
+            
+            
+        
             DispatchQueue.main.async{
-                self.photoCollection = photos
-                
+                self.photoUrlCollection = photos
+              
                 
                 
                 }
         })//end of closure
+
         
     }//end of viewDidLoad
         

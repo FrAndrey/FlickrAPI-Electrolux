@@ -10,7 +10,7 @@ import UIKit
 import PureLayout
 
 class CollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
-
+    
     var viewModel:ViewModel?
     var photoUrlCollection:[String]?
     let customCellIdentifier = "customCellIdentifier"
@@ -37,15 +37,15 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
     
     func addSubviews() {
         self.view.addSubview(image)
-       // self.view.addSubview(upperView)
+        // self.view.addSubview(upperView)
     }
     
     func setupConstraints() {
         image.autoAlignAxis(toSuperviewAxis: .vertical)
         image.autoPinEdge(toSuperviewEdge: .top, withInset: 150.0)
-//        upperView.autoPinEdge(toSuperviewEdge: .left)
-//        upperView.autoPinEdge(toSuperviewEdge: .right)
-//        upperView.autoPinEdgesToSuperviewEdges(with: .zero, excludingEdge: .bottom)
+        //        upperView.autoPinEdge(toSuperviewEdge: .left)
+        //        upperView.autoPinEdge(toSuperviewEdge: .right)
+        //        upperView.autoPinEdgesToSuperviewEdges(with: .zero, excludingEdge: .bottom)
     }
     
     
@@ -59,45 +59,47 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
         collectionView?.backgroundColor = .blue
         collectionView?.register(CustomCell.self, forCellWithReuseIdentifier: customCellIdentifier)
         
-        
-        
-        
-        
-        
-        
         Manager().FetchData(completionHandler: { (photos) in
+            
             self.photoUrlCollection = photos
             print(self.photoUrlCollection)
             
-                let url = URL(string: self.photoUrlCollection![0])!
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
             
-            URLSession.shared.dataTask(with: url, completionHandler:  { (data, _, _) in
-                DispatchQueue.main.async {
-                self.image.image = UIImage(data:data!)
-                 }
-            }).resume()
-            
-
         })//end of closure
-
+        
         
     }//end of viewDidLoad
-
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 150, height: 150)
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-       return 3
+        return self.photoUrlCollection?.count ?? 0
         
     }
-
-override func collectionView(_ collectionView: UICollectionView,
-                             cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
- 
-    let customCell = collectionView.dequeueReusableCell(withReuseIdentifier: customCellIdentifier, for: indexPath)
-    return customCell
- 
- }
-
+    
+    override func collectionView(_ collectionView: UICollectionView,
+                                 cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let customCell = collectionView.dequeueReusableCell(withReuseIdentifier: customCellIdentifier, for: indexPath) as! CustomCell
+        customCell.image = nil
+        
+        DispatchQueue.main.async {
+                let photoUrl:String = self.photoUrlCollection![indexPath.item] as String
+                let url = NSURL(string:photoUrl)
+                let fetchedImage:NSData = try! NSData(contentsOf: url as! URL)
+                
+                if fetchedImage != nil {
+                   customCell.imageView.image  = UIImage(data:fetchedImage as Data)
+                }//end of if
+                
+        }// end of closure
+        return customCell
+        
+    }
+    
 }

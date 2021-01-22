@@ -10,19 +10,30 @@ import UIKit
 
 class CustomCell: UICollectionViewCell {
 
+    var imageView:UIImageView!
+    var image:UIImage!
+
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
     }
     
-    
-    func setupViews() {
-       // backgroundColor = UIColor.brown
-        
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setupViews()
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    
+    func setupViews() {
+        self.clipsToBounds = true
+        imageView = UIImageView(frame: CGRect(x: self.bounds.origin.x, y: self.bounds.origin.y, width: 180, height: 180))
+        imageView.contentMode = UIView.ContentMode.scaleAspectFill
+        imageView.clipsToBounds = false
+        self.addSubview(imageView)
+        
+       // backgroundColor = UIColor.brown
+        
     }
     
     

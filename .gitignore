@@ -34,3 +34,4 @@ FlickrAPI-demo/Pods/PureLayout/LICENSE
 FlickrAPI-demo/Pods/Pods.xcodeproj/xcuserdata/andrey.xcuserdatad/xcschemes/xcschememanagement.plist
 FlickrAPI-demo/Pods/Pods.xcodeproj/xcuserdata/andrey.xcuserdatad/xcschemes/PureLayout.xcscheme
 FlickrAPI-demo/Pods/Pods.xcodeproj/xcuserdata/andrey.xcuserdatad/xcschemes/Pods-FlickrAPI-demo.xcscheme
+FlickrAPI-demo/FlickrAPI-demo/Model/CustomCellCollectionViewCell.swift

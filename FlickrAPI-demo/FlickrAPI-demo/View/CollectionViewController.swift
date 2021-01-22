@@ -19,7 +19,6 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
     
     lazy var image: UIImageView = {
         let imageView = UIImageView(image: UIImage(named: ""))
-        //UIImageView(image: UIImage(named: ""))
         imageView.autoSetDimensions(to: CGSize(width: 150.0, height: 150.0))
         imageView.layer.borderWidth = 3.0
         imageView.layer.borderColor = UIColor.lightGray.cgColor
@@ -36,7 +35,7 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
     }()
     
     func addSubviews() {
-        self.view.addSubview(image)
+        //self.view.addSubview(image)
         // self.view.addSubview(upperView)
     }
     
@@ -53,8 +52,8 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
         super.viewDidLoad()
         
         viewModel = ViewModel()
-        addSubviews()
-        setupConstraints()
+        //        addSubviews()
+        //        setupConstraints()
         
         collectionView?.backgroundColor = .blue
         collectionView?.register(CustomCell.self, forCellWithReuseIdentifier: customCellIdentifier)
@@ -73,30 +72,43 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
         
     }//end of viewDidLoad
     
+    //size of the cell
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 150, height: 150)
     }
     
+    //amount of items
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.photoUrlCollection?.count ?? 0
         
     }
     
+    //on selection
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //get the cell that user've clicked
+        let cell = collectionView.cellForItem(at: indexPath)
+        //open detailsViewController to present bigger picture
+        self.navigationController?.pushViewController(DetailViewController(), animated: false)
+    }
+    
+    //custom cell registration/way it displayed/showed the photos
     override func collectionView(_ collectionView: UICollectionView,
                                  cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let customCell = collectionView.dequeueReusableCell(withReuseIdentifier: customCellIdentifier, for: indexPath) as! CustomCell
-        customCell.image = nil
+        customCell.imageView.image = nil
         
         DispatchQueue.main.async {
-                let photoUrl:String = self.photoUrlCollection![indexPath.item] as String
-                let url = NSURL(string:photoUrl)
-                let fetchedImage:NSData = try! NSData(contentsOf: url as! URL)
-                
-                if fetchedImage != nil {
-                   customCell.imageView.image  = UIImage(data:fetchedImage as Data)
-                }//end of if
-                
+            let photoUrl:String = self.photoUrlCollection![indexPath.item] as String
+            let url = NSURL(string:photoUrl)
+            let fetchedImage:NSData = try! NSData(contentsOf: url as! URL)
+            
+            if fetchedImage != nil {
+                DispatchQueue.main.async {
+                    customCell.imageView.image  = UIImage(data:fetchedImage as Data)
+                }
+            }//end of if statement
+            
         }// end of closure
         return customCell
         

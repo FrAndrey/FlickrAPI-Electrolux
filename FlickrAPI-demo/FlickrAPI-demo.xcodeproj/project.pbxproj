@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55DF32EA25BDDC2500301ADD /* BioView Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DF32E925BDDC2500301ADD /* BioView Extension.swift */; };
 		55F339CF25B96CD700D0AD16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F339CE25B96CD700D0AD16 /* AppDelegate.swift */; };
 		55F339D125B96CD700D0AD16 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F339D025B96CD700D0AD16 /* SceneDelegate.swift */; };
 		55F339D325B96CD700D0AD16 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F339D225B96CD700D0AD16 /* CollectionViewController.swift */; };
@@ -20,13 +21,13 @@
 		55F339F125BA702400D0AD16 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F339F025BA702400D0AD16 /* DetailViewController.swift */; };
 		55F339F325BA736000D0AD16 /* BioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F339F225BA736000D0AD16 /* BioViewController.swift */; };
 		55F339F525BACC9200D0AD16 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F339F425BACC9200D0AD16 /* CustomCell.swift */; };
-		55F339F725BB343700D0AD16 /* Biography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F339F625BB343700D0AD16 /* Biography.swift */; };
 		824D2421DBFA2F5376369698 /* Pods_FlickrAPI_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00CAE9CF07AB3A66D9E50F0D /* Pods_FlickrAPI_demo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		00CAE9CF07AB3A66D9E50F0D /* Pods_FlickrAPI_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlickrAPI_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		32FD31FD4B57D749703D5D96 /* Pods-FlickrAPI-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickrAPI-demo.debug.xcconfig"; path = "Target Support Files/Pods-FlickrAPI-demo/Pods-FlickrAPI-demo.debug.xcconfig"; sourceTree = "<group>"; };
+		55DF32E925BDDC2500301ADD /* BioView Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BioView Extension.swift"; sourceTree = "<group>"; };
 		55F339CB25B96CD700D0AD16 /* FlickrAPI-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FlickrAPI-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		55F339CE25B96CD700D0AD16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55F339D025B96CD700D0AD16 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,7 +43,6 @@
 		55F339F025BA702400D0AD16 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		55F339F225BA736000D0AD16 /* BioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioViewController.swift; sourceTree = "<group>"; };
 		55F339F425BACC9200D0AD16 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
-		55F339F625BB343700D0AD16 /* Biography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Biography.swift; sourceTree = "<group>"; };
 		A8B3970BF83BA2D168E9D2D4 /* Pods-FlickrAPI-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickrAPI-demo.release.xcconfig"; path = "Target Support Files/Pods-FlickrAPI-demo/Pods-FlickrAPI-demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,7 +118,7 @@
 				55F339EC25BA6E5100D0AD16 /* MainNavigationController.swift */,
 				55F339EE25BA6EE400D0AD16 /* TabBarController.swift */,
 				55F339F225BA736000D0AD16 /* BioViewController.swift */,
-				55F339F625BB343700D0AD16 /* Biography.swift */,
+				55DF32E925BDDC2500301ADD /* BioView Extension.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -264,11 +264,11 @@
 				55F339F125BA702400D0AD16 /* DetailViewController.swift in Sources */,
 				55F339E625B970BD00D0AD16 /* Photos.swift in Sources */,
 				55F339EF25BA6EE400D0AD16 /* TabBarController.swift in Sources */,
+				55DF32EA25BDDC2500301ADD /* BioView Extension.swift in Sources */,
 				55F339D325B96CD700D0AD16 /* CollectionViewController.swift in Sources */,
 				55F339CF25B96CD700D0AD16 /* AppDelegate.swift in Sources */,
 				55F339D125B96CD700D0AD16 /* SceneDelegate.swift in Sources */,
 				55F339EA25B9BB0700D0AD16 /* ViewModel.swift in Sources */,
-				55F339F725BB343700D0AD16 /* Biography.swift in Sources */,
 				55F339ED25BA6E5100D0AD16 /* MainNavigationController.swift in Sources */,
 				55F339E825B974E100D0AD16 /* Manager.swift in Sources */,
 				55F339F525BACC9200D0AD16 /* CustomCell.swift in Sources */,

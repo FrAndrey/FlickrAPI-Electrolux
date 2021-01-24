@@ -26,7 +26,7 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
         
         Manager().FetchData(completionHandler: { (photos) in
             self.photoUrlCollection = photos
-            print(self.photoUrlCollection)
+           // print(self.photoUrlCollection)
             
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
@@ -67,15 +67,14 @@ class CollectionViewController: UICollectionViewController, UICollectionViewDele
         customCell.imageView.image = nil
         
         DispatchQueue.main.async {
-            let photoUrl:String = self.photoUrlCollection![indexPath.item] as String
-            let url = NSURL(string:photoUrl)
-            let fetchedImage:NSData = try! NSData(contentsOf: url as! URL)
+            if let photoUrl:String = self.photoUrlCollection![indexPath.item] as String {
+            let url = URL(string:photoUrl)
+            let fetchedImage:NSData = try! NSData(contentsOf: url!)
             
-            if fetchedImage != nil {
                 DispatchQueue.main.async {
                     customCell.imageView.image  = UIImage(data:fetchedImage as Data)
-                }
-            }//end of if statement
+            }
+            }//end of if
         }// end of closure
         return customCell
     }
